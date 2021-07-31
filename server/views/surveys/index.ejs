@@ -5,11 +5,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
-          <h3>Favourite Books List </h3>
+          <h3>Existing Survey List </h3>
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Create a Survey</a>
+          <a href="surveys/add" class="btn btn-primary"><i class="fa fa-plus"></i> Create a Survey</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -17,8 +17,9 @@
                 <tr>
                   <th>Survey Name</th>
                   <th class="text-center">Survey Owner</th>
-                  <th class="text-center">Survey Title</th>
-                  <th class="text-center">Created Date</th>
+                  <th class="text-center">Create Date</th>
+                  <th class="text-center">Start Date</th>
+                  <th class="text-center">End Date</th>
                   <th class="text-center"></th>
                   <th class="text-center"></th>
                 </tr>
@@ -30,24 +31,25 @@
                   
                   <td><%= survey[count].surveyName %></td>
                   <td class="text-center"><%= survey[count].surveyOwner %></td>
-                  <td class="text-center"><%= survey[count].surveyName %></td>
+                  <td class="text-center"><%= survey[count].createdDate %></td>
                    <!-- 
                  <td class="text-center">
                    <%=// survey[count].createdDate.toLocaleDateString([], {}) + ", " + survey[count].createdDate.toLocaleTimeString('en-US')%> </td>
                      -->
-                  <td class="text-center"><%= survey[count].createdDate%></td>
+                  <td class="text-center"><%= survey[count].startDate%></td>
+                  <td class="text-center"><%= survey[count].endDate%></td>
 
                   <td class="text-center">
                     <!-- ----------EDIT------- -->
                     
-                    <a href="/books/<%=survey[count]._id %>" class="btn btn-primary btn-sm">
+                    <a href="/surveys/<%=survey[count]._id %>" class="btn btn-primary btn-sm">
                      
                     <i class="fas fa-pencil-alt"></i>View
                   </td>
 
                   <td class="text-center">
                     <!-- ---------DELETE----------- -->
-                    <a href="/books/delete/<%=survey[count]._id %>" class="btn btn-danger btn-sm">
+                    <a href="/surveys/delete/<%=survey[count]._id %>" class="btn btn-danger btn-sm">
                       <i class="fas fa-trash alt"></i>Delete
                       </a>   
                     <!-- ------------------------ -->
