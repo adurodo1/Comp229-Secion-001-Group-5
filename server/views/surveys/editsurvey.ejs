@@ -4,12 +4,17 @@
 <style>
     #ijsQuestionlength
     {
+<<<<<<< HEAD
         display:none ;
     }
     hr{
       display: none;
     }
 
+=======
+        display: none;
+    }
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 </style>
     <!-- MAIN CONTENT -->
     <div class="container">
@@ -17,6 +22,7 @@
         <div class="col-md-offset-3 col-md-6">
           <h1><%= title %></h1>
             <form class="form" method="post" id="form">
+<<<<<<< HEAD
 
               <% if(survey.Questionnaire_type=="multiplechoice"){ %>
                 <div class="sticky btn btn-primary" id="addQuestion"><i class="fa fa-check-square-o"></i> Add Question</div>
@@ -34,6 +40,8 @@
                 <input type="text" class="form-control" id="surveyNameTextField"
                 placeholder="Survey Name" name="Questionnaire_type" value="<%= survey.Questionnaire_type %>" required readonly>
               </div>
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
               <div class="form-group">
                 <label for="surveyNameTextField">Survey Name</label>
  
@@ -58,6 +66,7 @@
 
 
               <!--Dynamically add questions-->
+<<<<<<< HEAD
               <% var ql=survey.Questionlength;%>
         <%  if(survey.Questionnaire_type=="multiplechoice") { %>  
 
@@ -66,6 +75,13 @@
 
    
   
+=======
+        <%  if(survey.Questionnaire_type=="multiplechoice") { %>  
+
+<% for (let count = 0; count < survey.Questionlength; count++) { %>
+
+    <input id="ijsQuestionlength" value ="<%= survey.Questionlength %>">
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 
     <%
     let name =`Question${count+1}`;
@@ -90,8 +106,11 @@
                          <% let anslength=name+"AnswerLength" %>
  
             <% for (let count = 0; count < survey[anslength]; count++) { %>
+<<<<<<< HEAD
 
               
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
             
            <div id="answerSett" class="anAnswer" style="display: inline-block;">
             <label for="<%= name+"Answer"+(count+1)%>" style="display: inline-block;">  <%= "Answer"+" "+(count+1 )%></label>
@@ -112,11 +131,16 @@
     <% } %>
     <% } %>
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 
     <!--True or False-->
     <%  if(survey.Questionnaire_type=="true_or_false") { %>  
 
+<<<<<<< HEAD
       <input id="ijsQuestionlength" name="Questionlengthtf" value ="<%= survey.Questionlengthtf %>">
             
         <% for (let cnt = 0; cnt < survey.Questionlengthtf; cnt++) { %>
@@ -128,6 +152,14 @@
         
             <%
             let name =`Question${cnt+1}`;
+=======
+        <% for (let count = 0; count < survey.Questionlengthtf; count++) { %>
+        
+            <input id="ijsQuestionlength" value ="<%= survey.Questionlength %>">
+        
+            <%
+            let name =`Question${count+1}`;
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
             
         %>
             
@@ -151,10 +183,21 @@
                     <% for (let count = 0; count < survey[anslength]; count++) { %>
                     
                    <div id="answerSett" class="anAnswer" style="display: inline-block;">
+<<<<<<< HEAD
                     <label for="<%= name+"Answer"+(count+1)%>" style="display: inline-block;"> </label>
                     
                         User options are True and False<br><br>
                      </div>
+=======
+                    <label for="<%= name+"Answer"+(count+1)%>" style="display: inline-block;">  <%= "Answer"+" "+(count+1 )%></label>
+                    <p>Change answer</p>
+                    <input type="text" class="form-control" id="<%= name+"Answer"+(count+1)%>" placeholder="   " name=""
+                        value=" <%= survey[name+"Answer"+(count+1)] %>" required style="width: 300px;display: inline-block;">
+                        <br>
+                        <input type="radio" id="" name="<%= name+"Answer"+(count+1)%>" value="true" onclick=""><label for="True">True</label><br>
+                        <input type="radio" id="" name="<%= name+"Answer"+(count+1)%>" value="false" onclick=""><label for="False">False</label><br>
+                    </div>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
         
                             <% } %>
         
@@ -167,30 +210,46 @@
                 <hr class="questionline">
                 </div> 
             <% } %>
+<<<<<<< HEAD
              
             <% } %>
         
       
+=======
+            <% } %>
+        
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
         
             <!---->
 
 
 
+<<<<<<< HEAD
               <button type="submit" id="mcSubmit" class="btn btn-primary "><i class="fa fa-check-square-o"></i> Submit</button>
+=======
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
               <a href="/surveys" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
             
              <!--  Add Questions-->
                 <!-- this button replicates the question sample when clicked-->
                
+<<<<<<< HEAD
                 <input type="text" name="" value="" style="display: none;">
+=======
+                <input type="text" name="Questionlength" value="">
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
             </form>
 
                     <!--Make template questionnaire builder invisible -->
                   
                     <div class="form-group question" id="question_sample" style="display: none;">
+<<<<<<< HEAD
 
                       
   <input type="text" class="answerlength" value="<%= survey.Questionlength %>" style="display:;"> 
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
                       <hr class="questionline">
                       <label for="Question 1">Question 1</label>
   
@@ -217,6 +276,7 @@
                       <hr class="questionline">
                       </div> 
                       <br><br><br>
+<<<<<<< HEAD
 
 
                       <div class="form-group question " id="question_sampletf" style="display: none;">
@@ -260,12 +320,19 @@
                         
             
                        </div>
+=======
+                      <div class="btn btn-primary" id="addQuestion"><i class="fa fa-check-square-o"></i> Add Question</div>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
       
 
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <script src="/Scripts/i2.js">
+=======
+    <script src="/Scripts/i.js">
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 
 
     </script>

@@ -1,10 +1,13 @@
 <% include ../partials/header.ejs %>
   <%- include ../partials/mainNav.ejs %>
+<<<<<<< HEAD
 <style>
   .questionline{
     display: none;
   }
 </style>
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 
     <!-- MAIN CONTENT -->
     <div class="container">
@@ -18,6 +21,7 @@
           <div class="col-md-6">
           </div>
 
+<<<<<<< HEAD
 
           <form class="form col-md-6" method="post" id="form" action="/surveys/add">
         
@@ -40,6 +44,28 @@
            
           </div>
 
+=======
+          <div class="col-md-6 sticky">
+
+            <div class="btn btn-primary sticky" id="addQuestion" style="display: none;"><i class="fa fa-check-square-o"></i> Add Question</div>
+          
+           
+          </div>
+
+          <div class="col-md-6 sticky">
+
+            <div class="btn btn-primary sticky" id="addQuestiontf" style="display: none;"><i class="fa fa-check-square-o"></i> Add Question</div>
+          
+           
+          </div>
+
+          <form class="form col-md-6" method="post" id="form">
+            <div class="form-group">
+            <input type="radio" id="" name="Questionnaire_type" value="multiplechoice" onclick="multipleChoice()"><label for="html">Multiple Choice</label><br>
+            <input type="radio" id="" name="Questionnaire_type" value="true_or_false" onclick="trueOrFalse()"><label for="trueorfalse">True or False</label><br>
+            </div>
+
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
             <div class="form-group">
 
             
@@ -66,8 +92,13 @@
                 id="surveyDescription"><%= survey.surveyDescription %> </textarea>
 
             </div>
+<<<<<<< HEAD
             <input type="text" style="display: none;" id="createdDate" name="createdDate">
             <button type="submit" class="btn btn-primary" onsubmit="creationDate()"><i class="fa fa-check-square-o"></i> Submit</button>
+=======
+
+            <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
             <a href="/surveys" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
 
             <!--  Add Questions-->
@@ -75,6 +106,10 @@
             <input type="text" name="Questionlength" value="" style="display:none;">
             <input type="text" name="Questionlengthtf" value=""  style="display:none;">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
           </form>
 
           <!--Make template questionnaire builder invisible -->
@@ -107,10 +142,15 @@
             </div>
             <hr class="questionline">
 
+<<<<<<< HEAD
             <input type="text" class="answerlength" value="1" style="display:none;">
             
 
              
+=======
+            <input type="text" class="answerlength" value="1" style="display:;">
+
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
           </div>
 
 
@@ -142,8 +182,13 @@
 
 
 
+<<<<<<< HEAD
                 <div class="" style="display:inline-block" id="removeAnswer"
                   onclick="trigger2delete(this)"><i class="fa fa-check-square-o"></i> </div>
+=======
+                <div class="btn btn-primary" style="display:inline-block" id="removeAnswer"
+                  onclick="trigger2delete(this)"><i class="fa fa-check-square-o"></i> remove Answer</div>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
               </div>
 
              
@@ -153,9 +198,15 @@
             </div>
             <hr class="questionline">
 
+<<<<<<< HEAD
             <input type="text" class="answerlength" value="1" style="display:none">       
 
            </div>
+=======
+            <input type="text" class="answerlength" value="1" style="display:none">
+
+          </div>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
           <br><br><br>
 
 

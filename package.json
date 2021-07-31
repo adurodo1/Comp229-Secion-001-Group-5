@@ -13,7 +13,11 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+<<<<<<< HEAD
     "express-session": "^1.17.2",
+=======
+    "express-session": "^1.17.1",
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
     "mongoose": "^5.10.4",

@@ -11,6 +11,7 @@ let DB = require('../config/db');
 let userModel = require('../models/user');
 let User = userModel.User; // alias
 
+<<<<<<< HEAD
 
 
 
@@ -32,6 +33,8 @@ module.exports.displayHomePage=(req, res, next)=> {
 
 //log in page
 
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if(!req.user) 
@@ -91,7 +94,11 @@ module.exports.processLoginPage = (req, res, next) => {
             }, token: authToken});
             */
 
+<<<<<<< HEAD
             return res.redirect('/surveys');
+=======
+            return res.redirect('/');
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
         });
     })(req, res, next);
 }

@@ -43,6 +43,7 @@
       <% } %>
         <a class="nav-link" href="/surveys"><i class="fab fa-elementor"></i> Existing Survey </a>
       </li>
+<<<<<<< HEAD
 
 
    
@@ -66,6 +67,22 @@
 
           <li class="nav-item"><a href="/register" class="nav-link">
             <i class="fa fa-user" aria-hidden="true"></i> Register</a></li>
+=======
+
+    </ul>
+    </div>
+   
+<div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
+    <ul class="navbar-nav">
+      <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+           <i class="fas fa-sign-out-alt"></i>Logout</a></li>
+          
+      <% } else { %>
+        <li class="nav-item"><a href="/login" class="nav-link">
+          <i class="fas fa-sign-in-alt"></i> Login</a></li>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
       <% } %>
     </ul>
     
