@@ -1,0 +1,71 @@
+<% include ../partials/header.ejs %>
+<%- include ../partials/mainNav.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <h3>Existing Survey List </h3>
+        
+          <br>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <% if(typeof displayName == 'string' && displayName ){ %>
+                    <th>Survey Name</th>
+                    <th class="text-center">Survey Owner</th>
+                    <th class="text-center">Create Date</th>
+                    <th class="text-center">Start Date</th>
+                    <th class="text-center">End Date</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+
+                    <% } else {%>
+                  <th>Survey Name</th>
+                  <th class="text-center">Survey Owner</th>
+                  <th class="text-center">Create Date</th>
+                  <th class="text-center">Start Date</th>
+                  <th class="text-center">End Date</th>
+                   
+                  <% } %>
+                </tr>
+                </thead>
+                <tbody> 
+                <% for (let count = 0; count < survey.length; count++) { %>
+                <tr>
+                  
+                  <td><%= survey[count].surveyName %></td>
+                  <td class="text-center"><%= survey[count].surveyOwner %></td>
+                  <td class="text-center"><%= survey[count].createdDate %></td>
+                  
+                    
+                  <td class="text-center"><%= survey[count].startDate%></td>
+                  <td class="text-center"><%= survey[count].endDate%></td>
+
+                  <td class="text-center">
+                    <!-- ----------EDIT------- -->
+
+                 
+                     
+                    
+                    <a href="/surveys/takeasurvey/<%=survey[count]._id %>" class="btn btn-primary btn-sm">
+                     
+                    <i class="fas fa-pencil-alt"></i>Take Survey
+                  </td>
+ 
+              </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+           <div class="col-md-offset-1 col-md-10 text-center">
+            <ul class="pagination pagination-lg pager" id="myPager"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
+
+
