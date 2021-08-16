@@ -1,6 +1,6 @@
 {
   "name": "week-4",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "start": "nodemon server.js"
@@ -16,8 +16,16 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+<<<<<<< HEAD
     "express-session": "^1.17.2",
     "fast-csv": "^4.3.6",
+=======
+<<<<<<< HEAD
+    "express-session": "^1.17.2",
+=======
+    "express-session": "^1.17.1",
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
     "mongoose": "^5.10.4",

@@ -2,7 +2,10 @@ let mongoose = require('mongoose');
 
 // create a model class
 let takeasurvey = mongoose.Schema({
+<<<<<<< HEAD
    
+=======
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
    username:String,
    displayName:String,
    surveyId:String,
@@ -19,7 +22,10 @@ let takeasurvey = mongoose.Schema({
     Question2:String,
     Question3:String,
     Question4:String,
+<<<<<<< HEAD
     Question5:String,
+=======
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     Question1Answer:String,
     Question2Answer:String,
     Question3Answer:String, 

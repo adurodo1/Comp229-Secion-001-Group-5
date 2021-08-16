@@ -2,6 +2,10 @@ var cnt=0;
 var cnt2=0;
 
 var cnttf=0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 
 
 
@@ -23,6 +27,14 @@ function triggertf()
 
 //document.getElementById("createdDate").value=today.toLocaleDateString();
 
+<<<<<<< HEAD
+=======
+=======
+ 
+function triggertf()
+{
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     if(document.getElementById("ijsQuestionlength"))
     cnt=parseInt(document.getElementById("ijsQuestionlength").value);
     
@@ -69,10 +81,22 @@ document.getElementsByName("Questionlengthtf")[0].value=cnttf;
 
 function trigger()
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     creationDate();
     if(document.getElementById("ijsQuestionlength"))
     cnt=parseInt(document.getElementById("ijsQuestionlength").value);
     //alert(cnt);
+<<<<<<< HEAD
+=======
+=======
+    if(document.getElementById("ijsQuestionlength"))
+    cnt=parseInt(document.getElementById("ijsQuestionlength").value);
+    
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     if(cnt<5)
     {
     let x=document.getElementById("question_sample");
@@ -84,7 +108,14 @@ cln.classList.add("removeNode");
 cln.style.display="block";
 cln.id="";
 //attach node and set name
+<<<<<<< HEAD
 //alert(cnt);
+=======
+<<<<<<< HEAD
+//alert(cnt);
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
  cln.children[2].setAttribute("name",`Question`+`${cnt+1}`);
 
 
@@ -100,14 +131,29 @@ cln.querySelector('#answerSet').id="";
 
 cln.querySelector('.answerlength').setAttribute("name",`Question`+`${cnt+1}`+`AnswerLength`);
 
+<<<<<<< HEAD
 cln.querySelector('.answerlength').setAttribute("style",`display:none`);
 
+=======
+<<<<<<< HEAD
+cln.querySelector('.answerlength').setAttribute("style",`display:none`);
+
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 document.getElementById("form").appendChild(cln);
 //document.getElementsByName("xxxxx").sty
 cnt++;
 
 document.getElementsByName("Questionlength")[0].value=cnt;
+<<<<<<< HEAD
 document.getElementById("ijsQuestionlength").value=cnt;
+=======
+<<<<<<< HEAD
+document.getElementById("ijsQuestionlength").value=cnt;
+=======
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
     }
     else
     return;
@@ -128,7 +174,15 @@ parent.remove();
 
 var va=document.getElementById("removeAnswer").value;
 document.getElementById("removeAnswer").value=va-1;
+<<<<<<< HEAD
 //alert("out")
+=======
+<<<<<<< HEAD
+//alert("out")
+=======
+alert("out")
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 //remove the most lenth indexed node
 
 }

@@ -6,6 +6,7 @@ var cnttf=0;
 const timeElapsed = Date.now();
 const today = new Date(timeElapsed);
 //document.getElementById("createdDate").value=today.toLocaleDateString();
+<<<<<<< HEAD
 
 
 function removeNode(e) {
@@ -86,6 +87,8 @@ function cantEdit(e)
 }
 
 
+=======
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
  
 function triggertf()
 {

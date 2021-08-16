@@ -2,8 +2,11 @@ let mongoose = require('mongoose');
 
 // create a model class
 let Survey = mongoose.Schema({
+<<<<<<< HEAD
    active:String,
    respondents:Number,
+=======
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
    username:String,
    displayName:String,
    surveyOwner:String,

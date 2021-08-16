@@ -26,6 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
+<<<<<<< HEAD
           <h3>  <% title %> </h3>
 
  
@@ -34,10 +35,25 @@
 
           
      
+=======
+<<<<<<< HEAD
+          <h3>  <% title %> </h3>
+          <% if(typeof displayName === 'string' && displayName ){ %>
+          <a href="surveys/add" class="btn btn-primary btn-success"><i class="fa fa-plus"></i> Create a Survey</a>
+          <% } %>
+=======
+          <h3>Existing Survey List </h3>
+          <!-- ------------------------ -->
+          <!-- FIX THE ADD BUTTON BELOW -->
+          <!-- ------------------------ -->
+          <a href="surveys/add" class="btn btn-primary"><i class="fa fa-plus"></i> Create a Survey</a>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover  ">
               <thead>
+<<<<<<< HEAD
                 <tr class="userSurveyHeader">
                   <% if(typeof displayName === 'string' && displayName ){ %>
                      
@@ -50,6 +66,19 @@
                     <th class="text-center">Analyze</th>
                     <th class="text-center">Modify</th>
                     <th>Delete</th>
+=======
+                <tr>
+                  <% if(typeof displayName === 'string' && displayName ){ %>
+                     
+                    
+                    <th>Survey Name</th>
+                    <th class="text-center">Survey Owner</th>
+                    <th class="text-center">Create Date</th>
+                    <th class="text-center">Start Date</th>
+                    <th class="text-center">End Date</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 
                     <% } else {%>
                       <H3>LOGIN / REGISTER TO CREATE AND MANAGE SURVEY</H3>
@@ -58,8 +87,18 @@
                   <th class="text-center">Create Date</th>
                   <th class="text-center">Start Date</th>
                   <th class="text-center">End Date</th>
+<<<<<<< HEAD
                    
                   <% } %>
+=======
+<<<<<<< HEAD
+                   
+                  <% } %>
+=======
+                  <th class="text-center"></th>
+                  <th class="text-center"></th>
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
                 </tr>
                 </thead>
                 <tbody> 
@@ -69,6 +108,7 @@
                 <tr style="background-color: white;">
                   
                   <td><%= survey[count].surveyName %></td>
+<<<<<<< HEAD
                   <td class="text-center"><%= survey[count].startDate %></td>
                   <td class="text-center"><%= survey[count].endDate %></td>
                   
@@ -79,6 +119,21 @@
                     <i class="far fa-chart-bar"></i>
                   </a>
                   </td>
+=======
+                  <td class="text-center"><%= survey[count].surveyOwner %></td>
+                  <td class="text-center"><%= survey[count].createdDate %></td>
+<<<<<<< HEAD
+                  
+                    
+=======
+                   <!-- 
+                 <td class="text-center">
+                   <%=// survey[count].createdDate.toLocaleDateString([], {}) + ", " + survey[count].createdDate.toLocaleTimeString('en-US')%> </td>
+                     -->
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+                  <td class="text-center"><%= survey[count].startDate%></td>
+                  <td class="text-center"><%= survey[count].endDate%></td>
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 
                   <% if(typeof displayName == 'string' && displayName ){ %> 
                   <td class="text-center">
@@ -96,7 +151,11 @@
                   <td class="text-center">
                     <!-- ---------DELETE----------- -->
                     <a href="/surveys/delete/<%=survey[count]._id %>" class="btn btn-danger btn-sm">
+<<<<<<< HEAD
                       <i class="fas fa-trash alt"></i>
+=======
+                      <i class="fas fa-trash alt"></i>Delete
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
                       </a>   
                     <!-- ------------------------ -->
                   </td>

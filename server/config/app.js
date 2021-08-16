@@ -23,7 +23,16 @@ let mongoose = require('mongoose');
 let DB = require('./db');
 
 mongoose.connect(process.env.URI || DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+ 
+=======
+//mongoose.connect("mongodb+srv://Saheed22:Saheed22@cluster0.lirry.mongodb.net/Survey?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology: true});
+
+>>>>>>> db9cc6315db30e32d2b3bd70115ddc60bea45c33
+>>>>>>> 541e205932f39f64c4261dce5bba8dab26c0a162
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
 mongoDB.once('open', ()=> {
