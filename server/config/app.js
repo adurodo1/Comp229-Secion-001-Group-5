@@ -5,8 +5,23 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+// import "mongoose" - required for DB Access
+let mongoose = require('mongoose');
+// URI
+let DB = require('./db');
+
+mongoose.connect(process.env.URI || DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', ()=> {
+  console.log("Connected to MongoDB...");
+});
+
+//Router Definition
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
+let surveyRouter = require('../routes/surveys');
 
 let app = express();
 
@@ -21,8 +36,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/surveys', surveyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
